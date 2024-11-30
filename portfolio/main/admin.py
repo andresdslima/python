@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project, ProjectImage, Tag
+from .models import Tag, Project, ProjectImage
 
 
 class ProjectImageInline(admin.TabularInline):
@@ -11,7 +11,7 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ("title", "link")
     inlines = [ProjectImageInline]
     search_fields = ("title", "description")
-    list_filter = ("tag",)
+    list_filter = ("tags",)
 
 
 class TagAdmin(admin.ModelAdmin):

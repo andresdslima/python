@@ -1,0 +1,54 @@
+.filters {
+  margin-bottom: 20px;
+}
+
+#name-search {
+  padding: 6px 10px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #00b3ff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 75px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  max-width: 100px;
+}
+
+.tag:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.projects-list {
+  margin-top: 20px;
+}
+
+.project {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project h2 {
+  margin-top: 0;
+}
+
+.project p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}

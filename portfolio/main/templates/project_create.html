@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Project Create Page
+{% endblock %}
+
+{% block content %}
+  <h4 class="text-center mb-4">New Project</h4>
+  <form class="p-2 m-auto d-flex justify-content-center align-items-center flex-column" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">Create</button>
+  </form>
+{% endblock %}

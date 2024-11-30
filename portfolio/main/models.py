@@ -11,7 +11,7 @@ class Tag(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    tag = models.ManyToManyField(Tag, related_name="projects")
+    tags = models.ManyToManyField(Tag, related_name="projects")
     link = models.URLField(max_length=200, blank=True)
 
     def __str__(self):

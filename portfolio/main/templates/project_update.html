@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Project Update Page
+{% endblock %}
+
+{% block extrahead %}
+  <link rel="stylesheet" href="{% static 'css/project.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <div class="project-card">
+    <div class="project-info">
+      <form method="POST" class="mb-4 col-sm-5" action="{% url 'project_update' project.id %}">
+        {% csrf_token %}
+        {% if error_message %}
+          <p class="text-danger">{{ error_message }}</p>
+        {% endif %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Update Project</button>
+      </form>
+      <a href="#" onClick="javascript:history.go(-1);">< Back</a>
+    </div>
+  </div>
+{% endblock %}
